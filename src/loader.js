@@ -1,3 +1,8 @@
+/*
+This module is for loading the page layout
+so that other modules can utilize the proper
+spacing for each part.
+*/
 import './styles.css';
 
 export default function initialLoader() {
@@ -14,15 +19,32 @@ export default function initialLoader() {
     mainWrapper.appendChild(navBar);
 
     //navBar sub-Divs go here
+    const userInfoDiv = document.createElement('div');
+    userInfoDiv.setAttribute('id', 'user-info-div');
+    navBar.appendChild(userInfoDiv);
 
-    
-    //Div that hosts side bar
-    const sideBar = document.createElement('div');
-    sideBar.setAttribute('id', 'side-bar');
-    mainWrapper.appendChild(sideBar);
+    //Div that hosts project bar
+    const projectBar = document.createElement('div');
+    projectBar.setAttribute('id', 'project-bar');
+    mainWrapper.appendChild(projectBar);
 
-    //sideBar sub-Divs go here
+    //project bar sub-Divs go here
+    const newProjectWrapper = document.createElement('div');
+    newProjectWrapper.setAttribute('id','new-project-wrapper');
+    projectBar.appendChild(newProjectWrapper);
 
+    const newProjectText = document.createElement('div');
+    newProjectText.textContent = 'Start a new Project';
+    newProjectWrapper.appendChild(newProjectText);
+
+    const newProjectBTN = document.createElement('button');
+    newProjectBTN.setAttribute('id', 'new-project-btn');
+    newProjectBTN.textContent = '+';
+    newProjectWrapper.appendChild(newProjectBTN);
+
+    const projectHolder = document.createElement('div');
+    projectHolder.setAttribute('id', 'project-holder');
+    projectBar.appendChild(projectHolder);
 
     //content goes inside this Div
     const contentWrapper = document.createElement('div');
