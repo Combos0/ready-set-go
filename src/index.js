@@ -1,4 +1,5 @@
 import initialLoader from './loader.js';
+import newProjectLoader from './projectForm.js';
 import './styles.css';
 
 initialLoader();
@@ -29,6 +30,6 @@ const domAddIns = (() => {
 const eventHandlers = (() => {
     const newProjectBTN = document.getElementById('new-project-btn');
     newProjectBTN.addEventListener('click', () => {
-        //creates new project form here
+        newProjectLoader();
     });
 })();
