@@ -4,6 +4,7 @@ import './styles.css';
 
 initialLoader();
 
+//user
 const user = (firstName, lastName) => {
     const getFullName = () => {
         let nameString = `${firstName} ${lastName}`;
@@ -14,7 +15,7 @@ const user = (firstName, lastName) => {
 
 const combos = user('Jeremy', 'Caudill');
 
-
+//project factory
 const todoProject = (title, priority, dueDate, description) => {
 
     return {title, priority, dueDate};

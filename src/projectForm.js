@@ -22,6 +22,9 @@ export default function newProjectLoader() {
         //root form
         const newProjectForm = document.createElement('form');
         newProjectForm.setAttribute('id', 'new-project-form');
+        newProjectForm.setAttribute('name', 'newProject');
+        newProjectForm.setAttribute('action', './index.js');
+        newProjectForm.setAttribute('method', 'post');
         projectFormWrapper.appendChild(newProjectForm);
 
         //form title
