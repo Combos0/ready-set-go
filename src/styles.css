@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-#user-info-div {
+#title-div {
     font-weight: bold;
     color: #323031;
     margin-left: 1rem;
@@ -24,7 +24,6 @@
 
 #project-bar {
     grid-area: 2 / 1 / 13 / 2;
-    background-color: #FFFCF2;
 }
 
 #content-wrapper {

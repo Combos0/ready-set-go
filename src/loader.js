@@ -19,9 +19,9 @@ export default function initialLoader() {
     mainWrapper.appendChild(navBar);
 
     //navBar sub-Divs go here
-    const userInfoDiv = document.createElement('div');
-    userInfoDiv.setAttribute('id', 'user-info-div');
-    navBar.appendChild(userInfoDiv);
+    const titleDiv = document.createElement('div');
+    titleDiv.setAttribute('id', 'title-div');
+    navBar.appendChild(titleDiv);
 
     //Div that hosts project bar
     const projectBar = document.createElement('div');
