@@ -10,4 +10,9 @@ const eventHandlers = (() => {
     newProjectBTN.addEventListener('click', () => {
         newProjectLoader();
     });
+
+    const formSubmitBTN = document.getElementById('form-submit');
+    formSubmitBTN.addEventListener('click', () => {
+        
+    })
 })();

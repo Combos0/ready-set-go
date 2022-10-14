@@ -2,12 +2,23 @@
 the new project form and using it to create a new project. */
 
 export default function formParser() {
-    const projectTitle = document.querySelector('#title-input').nodeValue;
-    const projectDesc = document.querySelector('#desc-input').nodeValue;
-    const projectDueDate = document.querySelector('#date-input').nodeValue;
-    const projectPriority = document.querySelector('.form-radio').nodeValue;
-    
-    let newProject = todoProject(projectTitle, projectDesc, projectDueDate, projectPriority);
+    const rawFormData = {
+        title: document.querySelector('#title-input').nodeValue,
+        priority: document.querySelector('.form-radio').nodeValue,
+        dueDate: document.querySelector('#date-input').nodeValue,
+        desc: document.querySelector('#desc-input').nodeValue,
+    };
+    function todoProject(title, priority, dueDate, desc) {
+        const TODOS = [];
+        const sayTitle = () => {
+            console.log(`This project's title is: ${title}`);
+        };
+        const sayDueDate = () => {
+            console.log(`This project's due date is: ${dueDate}`);
+        };
+        return {TODOS, sayTitle, sayDueDate};
+    };
 
-    return newProject;
+    let createdProject = new todoProject(rawFormData.title, rawFormData.priority, rawFormData.dueDate, rawFormData.desc);
+    return {createdProject}; 
 };
