@@ -1,4 +1,5 @@
 import './styles.css';
+import formParser from './formparse';
 
 /*This module is for creating new projects for the user.
 Each time it is activated it should take the information given
@@ -23,7 +24,7 @@ export default function newProjectLoader() {
         const newProjectForm = document.createElement('form');
         newProjectForm.setAttribute('id', 'new-project-form');
         newProjectForm.setAttribute('name', 'newProject');
-        newProjectForm.setAttribute('action', './formParse.js');
+        newProjectForm.setAttribute('action', '../dist/index.html');
         newProjectForm.setAttribute('method', 'post');
         projectFormWrapper.appendChild(newProjectForm);
 
@@ -111,5 +112,14 @@ export default function newProjectLoader() {
         formSubmit.setAttribute('type', 'submit');
         formSubmit.setAttribute('id', 'form-submit');
         newProjectForm.appendChild(formSubmit);
+    })();
+
+    //submit event
+    const submitEventHandler = (() => {
+        const formSubmitBTN = document.getElementById('form-submit');
+        formSubmitBTN.addEventListener('click', (event) => {
+            event.preventDefault();
+            formParser();
+    });
     })();
 };

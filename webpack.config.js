@@ -7,7 +7,7 @@ module.exports = {
     index: './src/index.js',
     loader: './src/loader.js',
     projectForm: './src/projectForm.js',
-    //formParse: './src/formParse.js',
+    formParse: './src/formparse.js',
   },
   devtool:'inline-source-map',
   plugins: [

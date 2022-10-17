@@ -1,5 +1,6 @@
 import initialLoader from './loader.js';
 import newProjectLoader from './projectForm.js';
+import formParser from './formparse.js';
 import './styles.css';
 
 initialLoader();
@@ -11,8 +12,9 @@ const eventHandlers = (() => {
         newProjectLoader();
     });
 
-    const formSubmitBTN = document.getElementById('form-submit');
-    formSubmitBTN.addEventListener('click', () => {
-        
-    })
+    /*const formSubmitBTN = document.getElementById('form-submit');
+    formSubmitBTN.addEventListener('click', (event) => {
+        event.preventDefault();
+        formParser();
+    }); */
 })();
