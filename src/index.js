@@ -1,6 +1,5 @@
 import initialLoader from './loader.js';
 import newProjectLoader from './projectForm.js';
-import formParser from './formparse.js';
 import './styles.css';
 
 initialLoader();
