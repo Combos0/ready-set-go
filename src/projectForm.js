@@ -80,6 +80,8 @@ export default function newProjectLoader() {
         const lowPriority = document.createElement('input');
         lowPriority.setAttribute('type', 'radio');
         lowPriority.setAttribute('name', 'priority');
+        lowPriority.setAttribute('value', 'low');
+        lowPriority.setAttribute('id', 'priority-low');
         lowPriority.classList.add('form-radio')
         newProjectForm.appendChild(lowPriority);
 
@@ -92,6 +94,8 @@ export default function newProjectLoader() {
         const medPriority = document.createElement('input');
         medPriority.setAttribute('type', 'radio');
         medPriority.setAttribute('name', 'priority');
+        medPriority.setAttribute('value', 'med');
+        medPriority.setAttribute('id', 'priority-med');
         medPriority.classList.add('form-radio')
         newProjectForm.appendChild(medPriority);
 
@@ -104,6 +108,8 @@ export default function newProjectLoader() {
         const highPriority = document.createElement('input');
         highPriority.setAttribute('type', 'radio');
         highPriority.setAttribute('name', 'priority');
+        highPriority.setAttribute('value', 'high');
+        highPriority.setAttribute('id', 'priority-high');
         highPriority.classList.add('form-radio')
         newProjectForm.appendChild(highPriority);
 
