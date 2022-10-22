@@ -1,10 +1,9 @@
 /*This module is responsible for taking the data from
 the new project form and using it to create a new project. */
 
-export default function formParser() {
+/*export default function formParser() {
     const rawFormData = {
         title: document.querySelector('#title-input').value,
-        //priority: document.querySelector('.form-radio').value,
         dueDate: document.querySelector('#date-input').value,
         desc: document.querySelector('#desc-input').value,
         priority: () => {
@@ -36,12 +35,6 @@ export default function formParser() {
     };
 
     const createdProject = new todoProject(rawFormData.title, rawFormData.priority(), rawFormData.dueDate, rawFormData.desc);
-    console.log(createdProject);
-    
     localStorage.setItem(`${createdProject.title}`, JSON.stringify(createdProject));
-    console.log(`${createdProject.title} has been logged in storage.`);
-    createdProject.sayTitle();
-    createdProject.sayPriority();
-    createdProject.sayDueDate();
-    createdProject.sayDesc();
+    return createdProject;
 };

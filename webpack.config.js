@@ -7,12 +7,11 @@ module.exports = {
     index: './src/index.js',
     loader: './src/loader.js',
     projectForm: './src/projectForm.js',
-    formParse: './src/formparse.js',
   },
   devtool:'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Ready Set Go!',
+      title: 'Byte Sized',
     }),
   ],
   output: {
