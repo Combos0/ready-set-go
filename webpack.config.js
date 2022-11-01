@@ -5,8 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    loader: './src/loader.js',
-    projectForm: './src/projectForm.js',
+    loader: './src/loader.js'
   },
   devtool:'inline-source-map',
   plugins: [
