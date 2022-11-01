@@ -46,3 +46,26 @@
     background-color: #323031;
     color: #FFFFFF;
 }
+
+/* styles for userInfo.js */
+
+#welcome-screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#welcome-title {
+    font-size: xx-large;
+    color: #323031;
+}
+
+#info-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
