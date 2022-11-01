@@ -2,5 +2,9 @@ import initialLoader from './loader';
 import createUser from './userInfo';
 import './styles.css';
 
-createUser();
-//initialLoader();
+const checksForUser = (() => {
+    let user = localStorage.getItem('user');
+    if (user === null) {
+        createUser();
+    } else {initialLoader();};
+})();
