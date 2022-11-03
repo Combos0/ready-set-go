@@ -10,7 +10,15 @@ const checksForUser = (() => {
     } else {initialLoader();};
 })();
 
-let user = (() => {
-    let user = localStorage.getItem('user');
-    console.log(user);
+let currentUser = (() => {
+    let retrievedUser = localStorage.getItem('user');
+    let user = JSON.parse(retrievedUser);
+    return {
+        user: user,
+    };
+})();
+
+let titleSpaceUpdate = (() => {
+    const userNameSpace = document.getElementById('user-info');
+    userNameSpace.textContent = `Hi ${currentUser.user.name}`;
 })();
