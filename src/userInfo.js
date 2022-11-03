@@ -44,14 +44,13 @@ export default function createUser() {
     })();
 
     function createUserObject() {
-        let userName = document.getElementById('name-field');
-        let user = new userInfo(userName);
+        const nameField = document.getElementById('name-field');
+        const userName = nameField.value;
+        let user = new Object();
+        user.name = userName;
+        user.projects = {};
         localStorage.setItem('user', JSON.stringify(user));
-    };
-
-    function userInfo(name) {
-        const userName = name;
-        const projects = {};
+        location.reload();
     };
 
 };
